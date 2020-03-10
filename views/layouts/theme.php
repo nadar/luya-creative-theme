@@ -2,6 +2,10 @@
 /**
  * @var $this \luya\web\View
  */
+
+use nadar\creative\CreativeThemeAsset;
+
+CreativeThemeAsset::register($this);
  
 $this->beginPage();
 ?>
@@ -29,18 +33,11 @@ $this->beginPage();
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
+            <?php foreach (Yii::$app->menu->find()->container('default')->root()->all() as $item): ?>
             <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger" href="<?= $item->link; ?>"><?= $item->title; ?></a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
+            <?php endforeach; ?>
         </ul>
         </div>
     </div>
