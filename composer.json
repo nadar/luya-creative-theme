@@ -6,9 +6,6 @@
             "nadar\\creative\\": ""
         }
     },
-    "require": {
-        "luyadev/luya-module-cms": ">=3.0"
-    },
     "require-dev": {
         "unglue/client": "^1.4",
         "luyadev/luya-testsuite" : "^1.0"
