@@ -1,6 +1,6 @@
 {
-    "name": "THEME_NAME",
+    "name": "bootstrap4 luya creative theme",
     "parentTheme": null,
     "pathMap": [],
-    "description": null
+    "description": "A theme based on Bootstrap 4 free creative theme (https://startbootstrap.com/themes/creative/)"
 }
