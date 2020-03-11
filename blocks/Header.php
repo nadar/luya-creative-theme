@@ -8,6 +8,16 @@ class Header extends PhpBlock
 {
     public $module = null;
 
+    public function config()
+    {
+        return [];
+    }
+
+    public function name()
+    {
+        return 'Header';
+    }
+
     public function frontend()
     {
         return '
