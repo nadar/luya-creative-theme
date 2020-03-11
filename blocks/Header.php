@@ -18,6 +18,11 @@ class Header extends PhpBlock
         return 'Header';
     }
 
+    public function admin()
+    {
+        return 'Header Block';
+    }
+
     public function frontend()
     {
         return '
@@ -36,10 +41,5 @@ class Header extends PhpBlock
             </div>
         </div>
         </header>';
-    }
-
-    public function admin()
-    {
-        return 'Header Block';
     }
 }
