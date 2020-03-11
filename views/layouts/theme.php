@@ -22,23 +22,21 @@ $this->beginPage();
     <body id="page-top">
     <?php $this->beginBody() ?>
 
-    
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><?= Yii::$app->siteTitle; ?></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto my-2 my-lg-0">
-            <?php foreach (Yii::$app->menu->find()->container('default')->root()->all() as $item): ?>
-            <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="<?= $item->link; ?>"><?= $item->title; ?></a>
-            </li>
-            <?php endforeach; ?>
-        </ul>
+            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                <?php foreach (Yii::$app->menu->find()->container('default')->root()->all() as $item): ?>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="<?= $item->link; ?>"><?= $item->title; ?></a>
+                </li>
+                <?php endforeach; ?>
+            </ul>
         </div>
     </div>
     </nav>
@@ -62,7 +60,6 @@ $this->beginPage();
         </div>
         <div class="col-lg-4 mr-auto text-center">
             <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-            <!-- Make sure to change the email address in anchor text AND the link below! -->
             <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
         </div>
         </div>
@@ -72,7 +69,7 @@ $this->beginPage();
     <!-- Footer -->
     <footer class="bg-light py-5">
     <div class="container">
-        <div class="small text-center text-muted">Copyright &copy; 2019 - Start Bootstrap</div>
+        <div class="small text-center text-muted">Copyright &copy; <?= date("Y"); ?> | Theme by Start Bootstrap</div>
     </div>
     </footer>
 
